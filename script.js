@@ -33,6 +33,6 @@ if (min <= 15) {
     console.log('четвертая четверть');
 }
 
-let age = 5;
+let age = 18;
 
-age <= 18 ? console.log('иди домой, тебе нет 18-ти'): console.log('добро пожаловать');
+age <= 17 ? console.log('иди домой, тебе нет 18-ти'): console.log('добро пожаловать');
