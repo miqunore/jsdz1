@@ -104,7 +104,7 @@ function checkAge(age) {
 checkAge(20)
 
 
-function sumEven (a, b) {
+function multiplicationEven (a, b) {
     let result = a;
     for (let i = a; i <= b; i++) 
         if ((i%2)===0) {
@@ -113,4 +113,4 @@ function sumEven (a, b) {
         return result;
 }
 
-console.log(sumEven(1, 10));
+console.log(multiplicationEven(1, 20));
