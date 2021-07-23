@@ -1,3 +1,5 @@
+/*
+
 let day = 5;
 if (day <= 10) {
     console.log('first decade');
@@ -114,3 +116,31 @@ function multiplicationEven (a, b) {
 }
 
 console.log(multiplicationEven(1, 20));
+*/
+
+let i = 1;
+let n = 1;
+
+while (i < 100) {
+    i++;
+    n += i;
+}
+console.log(n);
+
+let y = 1;
+let m = 1;
+
+do {
+    y++;
+    m += y;
+} while (y < 100)
+
+console.log(m);
+
+let z = 0;
+
+for (let x = 1; x <=100; x++) {
+    z += x;
+}
+
+console.log(z);
