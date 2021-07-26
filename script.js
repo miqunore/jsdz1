@@ -146,7 +146,7 @@ for (let x = 1; x <=100; x++) {
 console.log(z);
 
 */
-
+/*
 
 let number = [1, 2, 3, 4, 5];
 let numberSlice = number.slice(0, 3);
@@ -198,22 +198,35 @@ console.log(changeHalfs(arr3));
 
 
 
+
+*/
+
 const arr1 = [1, 2];
 const arr2 = [2, 3];
-const arr3 = ['a', 'b'];
-const arr4 = ['b', 'c'];
-const arr5 = ['b', 'e', 'c'];
-const arr6 = ['b', 'b', 'e'];
-const arr7 = ['b', 'c', 'e'];
-const arr8 = ['b', 'e', 'c'];
+const arr3 = ["a", "b"];
+const arr4 = ["b", "c"];
+const arr5 = ["b", "e", "c"];
+const arr6 = ["b", "b", "e"];
+const arr7 = ["b", "c", "e"];
+const arr8 = ["b", "e", "c"];
 
+function intersection() {
+    let unique = [];
+    let notUnique = [];
+    let arrResult = a.concat(intersection()).concat();
 
-let intersection = [];
+    for (let item of arrResult) {
+        const isUniqe = unique.every((uniqueItem) => uniqueItem !== item);
 
+        if (isUniqe) {
+            unique.push(item);
+        } else {
+            notUnique.push(item);
+        }
+    }
+    return notUnique;
+}
 
-
-
-console.log(intersection(arr1));
-console.log(intersection(arr1, arr2));
-console.log(intersection(arr3, arr4));
+//console.log(intersection(arr1, arr2));
+//console.log(intersection(arr3, arr4));
 console.log(intersection(arr6, arr7, arr8));
