@@ -147,28 +147,6 @@ console.log(z);
 
 */
 
-/*
-const arr1 = [1, 2];
-const arr2 = [2, 3];
-const arr3 = ['a', 'b'];
-const arr4 = ['b', 'c'];
-const arr5 = ['b', 'e', 'c'];
-const arr6 = ['b', 'b', 'e'];
-const arr7 = ['b', 'c', 'e'];
-const arr8 = ['b', 'e', 'c'];
-
-
-let intersection = [];
-
-
-
-
-console.log(intersection(arr1));
-console.log(intersection(arr1, arr2));
-console.log(intersection(arr3, arr4));
-console.log(intersection(arr6, arr7, arr8));
-
-*/
 
 let number = [1, 2, 3, 4, 5];
 let numberSlice = number.slice(0, 3);
@@ -217,3 +195,25 @@ function changeHalfs(arr) {
 console.log(changeHalfs(arr1));
 console.log(changeHalfs(arr2));
 console.log(changeHalfs(arr3));
+
+
+
+const arr1 = [1, 2];
+const arr2 = [2, 3];
+const arr3 = ['a', 'b'];
+const arr4 = ['b', 'c'];
+const arr5 = ['b', 'e', 'c'];
+const arr6 = ['b', 'b', 'e'];
+const arr7 = ['b', 'c', 'e'];
+const arr8 = ['b', 'e', 'c'];
+
+
+let intersection = [];
+
+
+
+
+console.log(intersection(arr1));
+console.log(intersection(arr1, arr2));
+console.log(intersection(arr3, arr4));
+console.log(intersection(arr6, arr7, arr8));
