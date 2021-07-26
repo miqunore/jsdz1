@@ -116,7 +116,7 @@ function multiplicationEven (a, b) {
 }
 
 console.log(multiplicationEven(1, 20));
-*/
+
 
 let i = 1;
 let n = 1;
@@ -144,3 +144,76 @@ for (let x = 1; x <=100; x++) {
 }
 
 console.log(z);
+
+*/
+
+/*
+const arr1 = [1, 2];
+const arr2 = [2, 3];
+const arr3 = ['a', 'b'];
+const arr4 = ['b', 'c'];
+const arr5 = ['b', 'e', 'c'];
+const arr6 = ['b', 'b', 'e'];
+const arr7 = ['b', 'c', 'e'];
+const arr8 = ['b', 'e', 'c'];
+
+
+let intersection = [];
+
+
+
+
+console.log(intersection(arr1));
+console.log(intersection(arr1, arr2));
+console.log(intersection(arr3, arr4));
+console.log(intersection(arr6, arr7, arr8));
+
+*/
+
+let number = [1, 2, 3, 4, 5];
+let numberSlice = number.slice(0, 3);
+console.log(numberSlice);
+
+let number2 = [1, 2, 3, 4, 5];
+let numberSlice2 = number.slice(-2);
+console.log(numberSlice2);
+
+
+let num = '1124356712453';
+function spliceNum(num, symbol) {
+    let result = '';
+    for (let i = 0; i < num.length; i++) {
+        if ((num[i] % 2) != 0) {
+            if (i != num.length - 1) {
+                result += num[i] + symbol;
+            } else {
+                result += num[i];
+            }
+        } else {
+            result += num[i];
+        }
+    }
+    return result;
+}
+console.log(spliceNum(num, '-'));
+
+
+const arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+const arr2 = ['Roma', 'Sasha', 'Vlad', 'Oleg'];
+const arr3 = [1, 2, 3]
+
+function changeHalfs(arr) {
+    let arrResult = [];
+    if ((arr.length) % 2 == 0) {
+        let arrResult1 = arr.slice(0, (arr.length)/2);
+        let arrResult2 = arr.slice((arr.length)/2);
+        return arrResult = arrResult2.concat(arrResult1);
+        
+    } else {
+    return 'ошибка'
+}
+}
+
+console.log(changeHalfs(arr1));
+console.log(changeHalfs(arr2));
+console.log(changeHalfs(arr3));
