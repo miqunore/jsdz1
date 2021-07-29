@@ -118,6 +118,8 @@ function multiplicationEven (a, b) {
 console.log(multiplicationEven(1, 20));
 
 
+
+
 let i = 1;
 let n = 1;
 
@@ -146,7 +148,7 @@ for (let x = 1; x <=100; x++) {
 console.log(z);
 
 */
-/*
+
 
 let number = [1, 2, 3, 4, 5];
 let numberSlice = number.slice(0, 3);
@@ -196,41 +198,3 @@ console.log(changeHalfs(arr1));
 console.log(changeHalfs(arr2));
 console.log(changeHalfs(arr3));
 
-*/
-
-const arr1 = [1, 2];
-const arr2 = [2, 3];
-const arr3 = ["a", "b"];
-const arr4 = ["b", "c"];
-const arr5 = ["b", "e", "c"];
-const arr6 = ["b", "b", "e"];
-const arr7 = ["b", "c", "e"];
-const arr8 = ["b", "e", "c"];
-
-function intersection(...arrays) {
-
-    let unique = [...arrays];
-    let noUnique = [];
-
-    for (let i = 0; i < 3; i++) {
-
-        let arr = [].concat(unique[i]);
-        let arr2 = [].concat(unique[i + 1]);
-        for (let item of arr) {
-
-            const isUnique = arr2.every((arrItem) => arrItem != item);
-
-            if (isUnique) {
-
-            } else {
-
-                noUnique.push(item);
-            }
-        }
-        return noUnique;
-    }
-}
-
-console.log(intersection(arr1, arr2));
-console.log(intersection(arr3, arr4, arr5));
-console.log(intersection(arr6, arr7, arr8));
