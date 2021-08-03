@@ -147,7 +147,6 @@ for (let x = 1; x <=100; x++) {
 
 console.log(z);
 
-*/
 
 
 let number = [1, 2, 3, 4, 5];
@@ -197,4 +196,96 @@ function changeHalfs(arr) {
 console.log(changeHalfs(arr1));
 console.log(changeHalfs(arr2));
 console.log(changeHalfs(arr3));
+
+
+
+const form = '(5465+6545)*(()()()(5145+2315)';
+
+function num(zxc) {
+
+    let res = '';
+    for (let i = 0; i <= zxc.length; i++) {
+        if (res >= 0) {
+            let w = zxc[i];
+            if (w == '(') {
+                res++
+            } else {
+                if (w == ')') {
+                    res--
+                }
+            }
+        } else {
+            return ('ошибка')
+        }
+    }
+    if (res === 0) {
+        return ('всё ок')
+    }
+    return ('ошибка')
+}
+
+console.log(num(form));
+
+
+*/
+
+const data1 = {
+    a: 1,
+    b: 1
+};
+const data2 = {
+    a: 1,
+    b: 1
+};
+const data3 = {
+    a: 1,
+    b: 2
+};
+
+
+function isEqual(firstObject, secondObject) {
+
+    if (JSON.stringify(firstObject) === JSON.stringify(secondObject)) {
+        return true
+    }
+    return false
+}
+
+console.log(isEqual(data1, data2));
+console.log(isEqual(data1, data3));
+
+
+
+console.log(Object.keys(data2));
+
+function objKey(arr) {
+    const arrs = [];
+
+    for (let a in arr) {
+        if (arr.hasOwnProperty(a)) {
+            arrs.push(a)
+        }
+    }
+    return arrs
+}
+console.log(objKey(data2));
+
+
+
+console.log(Object.values(data3));
+
+function objVal(arr) {
+    const arrs = [];
+
+    for (let x in arr) {
+        if (arr.hasOwnProperty(x)) {
+            arrs.push(arr[x])
+        }
+    }
+    return arrs
+    
+}
+console.log(objVal(data3));
+
+
 
