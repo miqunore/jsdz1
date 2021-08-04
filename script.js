@@ -225,8 +225,6 @@ function num(zxc) {
 }
 
 console.log(num(form));
-
-
 */
 
 const data1 = {
@@ -283,9 +281,28 @@ function objVal(arr) {
         }
     }
     return arrs
-    
+
 }
 console.log(objVal(data3));
 
 
 
+
+function Farm(animal, food, gives, weight) {
+    this.animal = animal;
+    this.food = food;
+    this.gives = gives;
+    this.weight = weight;
+}
+
+
+let cow = new Farm('cow', 'grass', 'milk', 2);
+let sheep = new Farm('sheep', 'grass', 'wool', 1);
+let chicken = new Farm('chicken', 'corn', 'egg', 0.1);
+
+
+let farm = [cow, sheep, chicken]
+
+
+
+console.log(farm);
