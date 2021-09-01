@@ -225,7 +225,7 @@ function num(zxc) {
 }
 
 console.log(num(form));
-*/
+
 
 const data1 = {
     a: 1,
@@ -306,3 +306,87 @@ let farm = [cow, sheep, chicken]
 
 
 console.log(farm);
+*/
+
+const a = [1, 2, 3, 4, 5];
+console.log(a.concat(a))
+
+
+
+
+const b = [1, 2, 3, 4, 5];
+const c = [1, 3, 6, 3, 1, 4, 7];
+
+function sameItem(x, y) {
+    let unique = [];
+    y.filter(function (item) {
+        for (let i = 0; i <= x.length; i++) {
+            if (x[i] === item) {
+                let isUnique = unique.every((uniqueItem) => uniqueItem !== item)
+                if (isUnique) {
+                    unique.push(item)
+                }
+            }
+        }
+    });
+    return unique
+}
+console.log(sameItem(b, c));
+
+
+
+
+function sumAB (a,b){
+    return a+b
+}
+console.log(sumAB(1,2));
+
+
+
+
+const arr = [1, 2, 3, 4, 5];
+
+function joinNum(num) {
+    let arr2 = [];
+    arr.forEach(function (item, i, arr) {
+        arr2.push(item + num);
+    });
+    return arr2.join(" ")
+}
+console.log(joinNum(10));
+
+
+
+
+function revers(number) {
+    let i
+    if (number > 0) {
+        i = String(number);
+        return +i.split('').reverse().join('');
+    }
+    i = String(number * -1);
+    return +i.split('').reverse().join('') * -1;
+}
+console.log(revers(15));
+console.log(revers(981));
+console.log(revers(500));
+console.log(revers(-15));
+console.log(revers(-90));
+
+
+
+
+
+
+
+
+
+/*
+let chare = 'fjdsfkjdposfkdpok'
+function maxChare (str) {
+    let ch = str.split('').sort().join('');
+    
+    let a = ch[]
+    if ()
+}
+console.log(maxChare(chare));*/
