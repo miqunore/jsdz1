@@ -336,10 +336,33 @@ console.log(sameItem(b, c));
 
 
 
-function sumAB (a,b){
-    return a+b
+
+
+function sum (x) {
+    return function (y) {
+        console.log(x+y);
+    }
 }
-console.log(sumAB(1,2));
+sum(1)(2)
+
+
+
+
+
+
+
+function add (x,z) {
+    if (!!z) {
+        return console.log(x+z);
+    }
+    return function (y) {
+        console.log(x+y);
+    }
+}
+add(1,2)
+add(2)(4)
+
+
 
 
 
