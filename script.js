@@ -308,8 +308,7 @@ let farm = [cow, sheep, chicken]
 console.log(farm);
 */
 
-const a = [1, 2, 3, 4, 5];
-console.log(a.concat(a))
+
 
 
 
@@ -338,30 +337,12 @@ console.log(sameItem(b, c));
 
 
 
-function sum (x) {
+function sum(x) {
     return function (y) {
-        console.log(x+y);
+        console.log(x + y);
     }
 }
 sum(1)(2)
-
-
-
-
-
-
-
-function add (x,z) {
-    if (!!z) {
-        return console.log(x+z);
-    }
-    return function (y) {
-        console.log(x+y);
-    }
-}
-add(1,2)
-add(2)(4)
-
 
 
 
@@ -381,6 +362,28 @@ console.log(joinNum(10));
 
 
 
+
+
+
+
+function add(x, z) {
+    if (!!z) {
+        return console.log(x + z);
+    }
+    return function (y) {
+        console.log(x + y);
+    }
+}
+add(1, 2)
+add(2)(4)
+
+
+
+
+
+
+
+
 function revers(number) {
     let i
     if (number > 0) {
@@ -396,20 +399,3 @@ console.log(revers(500));
 console.log(revers(-15));
 console.log(revers(-90));
 
-
-
-
-
-
-
-
-
-/*
-let chare = 'fjdsfkjdposfkdpok'
-function maxChare (str) {
-    let ch = str.split('').sort().join('');
-    
-    let a = ch[]
-    if ()
-}
-console.log(maxChare(chare));*/
