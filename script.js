@@ -399,3 +399,29 @@ console.log(revers(500));
 console.log(revers(-15));
 console.log(revers(-90));
 
+
+
+
+let char = 'drreeeeeeeeeeeeee11113453456546588888888888888888888888888888888888eettttttvvvvvvvvvttttttttee';
+
+function maxChar(ch) {
+    let abc = ch.split('').sort().join('')
+    let efg = []
+    let gfe = []
+    let we = 1;
+    console.log(abc);
+    for (let i = 0; i < abc.length; i++) {
+        if (abc[i] == abc[i+1]) {
+            we++
+        } else {
+            efg.push(abc[i])
+            gfe.push(we)
+            we = 1;
+        }
+    }
+    let ccc = Math.max(...gfe);
+     return efg[gfe.indexOf(ccc)]
+}
+
+console.log(maxChar(char));
+
