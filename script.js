@@ -401,7 +401,8 @@ console.log(revers(-90));
 
 
 
-
+// вывести самую частую букву
+// через масив
 let char = 'drreeeeeeeeeeeeee11113453456546588888888888888888888888888888888888eettttttvvvvvvvvvttttttttee';
 
 function maxChar(ch) {
@@ -420,8 +421,31 @@ function maxChar(ch) {
         }
     }
     let ccc = Math.max(...gfe);
-     return efg[gfe.indexOf(ccc)]
+    return efg[gfe.indexOf(ccc)]
 }
 
 console.log(maxChar(char));
 
+
+
+// через объект
+function maxChar2(ch2) {
+    let bce = {}
+    let ce = 1
+    for (let i = 0; i < ch2.length; i++) {
+        if (!bce[ch2[i]]){
+            ce = 1
+            bce[ch2[i]] = ce
+        } else {
+            ce = bce[ch2[i]]
+            ce++
+            bce[ch2[i]] = ce
+        }
+    }
+    let keyss = Object.keys(bce);
+    let val = Object.values(bce);
+    let key = Math.max(...val);
+    return keyss[val.indexOf(key)]
+}
+
+console.log(maxChar2(char));
