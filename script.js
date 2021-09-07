@@ -406,22 +406,22 @@ console.log(revers(-90));
 let char = 'drreeeeeeeeeeeeee11113453456546588888888888888888888888888888888888eettttttvvvvvvvvvttttttttee';
 
 function maxChar(ch) {
-    let abc = ch.split('').sort().join('')
-    let efg = []
-    let gfe = []
-    let we = 1;
-    console.log(abc);
-    for (let i = 0; i < abc.length; i++) {
-        if (abc[i] == abc[i+1]) {
-            we++
+    let inAbc = ch.split('').sort().join('')
+    let arrAbc = []
+    let arrNumb = []
+    let numb = 1;
+    console.log(inAbc);
+    for (let i = 0; i < inAbc.length; i++) {
+        if (inAbc[i] == inAbc[i+1]) {
+            numb++
         } else {
-            efg.push(abc[i])
-            gfe.push(we)
-            we = 1;
+            arrAbc.push(inAbc[i])
+            arrNumb.push(numb)
+            numb = 1;
         }
     }
-    let ccc = Math.max(...gfe);
-    return efg[gfe.indexOf(ccc)]
+    let resul = Math.max(...arrNumb);
+    return arrAbc[arrNumb.indexOf(resul)]
 }
 
 console.log(maxChar(char));
@@ -429,21 +429,21 @@ console.log(maxChar(char));
 
 
 // через объект
-function maxChar2(ch2) {
-    let bce = {}
-    let ce = 1
-    for (let i = 0; i < ch2.length; i++) {
-        if (!bce[ch2[i]]){
-            ce = 1
-            bce[ch2[i]] = ce
+function maxChar2(char) {
+    let objChar = {}
+    let num = 1
+    for (let i = 0; i < char.length; i++) {
+        if (!objChar[char[i]]){
+            num = 1
+            objChar[char[i]] = num
         } else {
-            ce = bce[ch2[i]]
-            ce++
-            bce[ch2[i]] = ce
+            num = objChar[char[i]]
+            num++
+            objChar[char[i]] = num
         }
     }
-    let keyss = Object.keys(bce);
-    let val = Object.values(bce);
+    let keyss = Object.keys(objChar);
+    let val = Object.values(objChar);
     let key = Math.max(...val);
     return keyss[val.indexOf(key)]
 }
